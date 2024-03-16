@@ -16,7 +16,7 @@ class analysis_toolbox:
 
     def ML_predict(self, ethnicity):
         # Assuming 'African' is a binary target variable in your dataframe
-        vectorizer = TfidfVectorizer(max_features=1000)
+        vectorizer = TfidfVectorizer(max_features=5000)
         x = vectorizer.fit_transform(self.df['name']).toarray()
         y = self.df[ethnicity]
 
